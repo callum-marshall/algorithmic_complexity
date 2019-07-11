@@ -10,4 +10,6 @@ const myReverse = (array) => {
   return newArray
 }
 
+console.log(myReverse([1,2,3,4,5]))
+
 benchmark.runManyTimes(myReverse)

@@ -21,7 +21,7 @@ class Benchmark {
     for (let size = 50000; size <= 1000000; size = size + 50000) {
       const array = this.generateArray(size)
       const diff = this.run(myFunction, array)
-      console.log(`|${size} || ${diff}`)
+      console.log(`| ${size} || ${diff}`)
     }
   }
 }
