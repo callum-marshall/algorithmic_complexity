@@ -28,6 +28,27 @@ const myShuffle = (array) => {
 
 }
 
+// const myShuffle = (array) => {
+//   let shuffled = array
+//
+//   for (let i = 0; i < 7; ++i) {
+//     let setA = []
+//     let setB = []
+//
+//     shuffled.forEach((element) => {
+//       if (Math.random() > 0.5) {
+//         setA.push(element)
+//       } else {
+//         setB.push(element)
+//       }
+//     })
+//
+//     shuffled = setA.concat(setB)
+//   }
+//
+//   return shuffled
+// }
+
 // console.log(myShuffle([1,2,3,4,5,6,7,8,9,10]))
 
 benchmark.runManyTimes(myShuffle)
