@@ -3,52 +3,27 @@ const { Benchmark } = require('../benchmark')
 const benchmark = new Benchmark
 
 const myShuffle = (array) => {
-  let newArray = array
-  const half = array.length/2
 
-  for ( i = 0; i < 7; i++ ) {
-    let array1 = newArray.slice(0, (half))
-    let array2 = newArray.splice(half)
+  let newArray = []
+  const num = array.length
 
-    newArray = []
+  // for each element in the array
+  for ( i = 0; i < num; i++ ) {
 
-    while ( array1.length > 0 && array2.length > 0) {
-      if (Math.random() > 0.5) {
-        newArray.push(array1.pop())
-      } else {
-        newArray.push(array2.pop())
-      }
-    }
+    // get a random index number
+    rand = Math.floor(Math.random() * Math.floor(array.length - 1))
 
-    newArray = newArray.concat(array1)
-    newArray = newArray.concat(array2)
+    // copy that random element to a new array
+    newArray.push(array[rand])
+
+    // move the last element in the array to the position of the copied element
+    array[rand] = array.pop()
+
   }
 
   return newArray
-
 }
 
-// const myShuffle = (array) => {
-//   let shuffled = array
-//
-//   for (let i = 0; i < 7; ++i) {
-//     let setA = []
-//     let setB = []
-//
-//     shuffled.forEach((element) => {
-//       if (Math.random() > 0.5) {
-//         setA.push(element)
-//       } else {
-//         setB.push(element)
-//       }
-//     })
-//
-//     shuffled = setA.concat(setB)
-//   }
-//
-//   return shuffled
-// }
-
-// console.log(myShuffle([1,2,3,4,5,6,7,8,9,10]))
+// console.log(myShuffle([0,1,2,3,4,5,6,7,8,9]))
 
 benchmark.runManyTimes(myShuffle)
