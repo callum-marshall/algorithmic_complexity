@@ -18,8 +18,8 @@ const fizzBuzz = (array) => {
 
 }
 
-const test = Array.from(Array(100), (_,x) => x + 1)
+// const test = Array.from(Array(100), (_,x) => x + 1)
 
-console.log(fizzBuzz(test))
+// console.log(fizzBuzz(test))
 
 benchmark.runManyTimes(fizzBuzz)

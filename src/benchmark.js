@@ -1,7 +1,7 @@
 class Benchmark {
 
   time() {
-    return new Date(Date.now())
+    return Date.now()
   }
 
   run(myFunction, array) {
@@ -21,7 +21,15 @@ class Benchmark {
     for (let size = 50000; size <= 1000000; size = size + 50000) {
       const array = this.generateArray(size)
       const diff = this.run(myFunction, array)
-      console.log(`| ${size} || ${diff}`)
+      console.log(`${diff}`)
+    }
+  }
+
+  runManyTimesSmall(myFunction) {
+    for (let size = 500; size <= 10000; size = size + 500) {
+      const array = this.generateArray(size)
+      const diff = this.run(myFunction, array)
+      console.log(`${diff}`)
     }
   }
 }

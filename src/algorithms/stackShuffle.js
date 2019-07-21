@@ -13,6 +13,6 @@ const stackShuffle = (a) => {
   return newArray
 }
 
-console.log(stackShuffle([0,1,2,3,4,5,6,7,8,9]))
+// console.log(stackShuffle([0,1,2,3,4,5,6,7,8,9]))
 
-// benchmark.runManyTimes(stackShuffle)
+benchmark.runManyTimes(stackShuffle)
