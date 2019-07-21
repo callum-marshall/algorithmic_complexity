@@ -8,8 +8,7 @@ class Benchmark {
     const start = this.time()
     myFunction(array)
     const end = this.time()
-    const diff = end - start
-    return diff
+    return end - start
   }
 
   generateArray(size) {
