@@ -27,4 +27,4 @@ const lowestPositiveInteger = (array) => {
 
 // console.log(lowestPositiveInteger([1, 2, 0]))
 
-benchmark.runManyTimes(lowestPositiveInteger)
+benchmark.runManyTimesBig(lowestPositiveInteger)

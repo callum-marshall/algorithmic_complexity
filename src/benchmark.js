@@ -31,6 +31,14 @@ class Benchmark {
       console.log(`${diff}`)
     }
   }
+
+  runManyTimesBig(myFunction) {
+    for (let size = 500000; size <= 10000000; size = size + 500000) {
+      const array = this.generateArray(size)
+      const diff = this.run(myFunction, array)
+      console.log(`${diff}`)
+    }
+  }
 }
 
 module.exports = {
